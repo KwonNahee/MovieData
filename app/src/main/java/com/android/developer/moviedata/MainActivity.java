@@ -62,8 +62,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClick(View target) {
         Bundle bundle = new Bundle();
         bundle.putInt("id", 0);
-        Intent intent = new Intent(getApplicationContext(),
-                com.android.developer.moviedata.DisplayMovie.class);
+        Intent intent = new Intent(getApplicationContext(), DisplayMovie.class);
         intent.putExtras(bundle);
         startActivity(intent);
     }

@@ -28,7 +28,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(
                 "create table movies " +
-                        "(id integer primary key,name text, director text, year text, nation text, rating text)"
+                        "(id integer primary key, name text, director text, year text, nation text, rating text)"
         );
     }
 
