@@ -27,8 +27,9 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(
-                "create table movies" + "(id integer primary key, name text, " +
-                        "director text, year text, nation text, rating text)");
+                "create table movies " +
+                        "(id integer primary key,name text, director text, year text, nation text, rating text)"
+        );
     }
 
     @Override
@@ -37,8 +38,7 @@ public class DBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public boolean insertMovie(String name, String director, String year,
-                               String nation, String rating) {
+    public boolean insertMovie(String name, String director, String year, String nation, String rating) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
@@ -54,20 +54,17 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public Cursor getData(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res = db.rawQuery("select * from movies where id=" + id + "",
-                null);
+        Cursor res = db.rawQuery("select * from movies where id=" + id + "", null);
         return res;
     }
 
     public int numberOfRows() {
         SQLiteDatabase db = this.getReadableDatabase();
-        int numRows = (int) DatabaseUtils
-                .queryNumEntries(db, MOVIES_TABLE_NAME);
+        int numRows = (int) DatabaseUtils.queryNumEntries(db, MOVIES_TABLE_NAME);
         return numRows;
     }
 
-    public boolean updateMovie(Integer id, String name, String director,
-                               String year, String nation, String rating) {
+    public boolean updateMovie(Integer id, String name, String director, String year, String nation, String rating) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("name", name);
@@ -75,24 +72,25 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues.put("year", year);
         contentValues.put("nation", nation);
         contentValues.put("rating", rating);
-        db.update("movies", contentValues, "id = ? ",
-                new String[] { Integer.toString(id) });
+        db.update("movies", contentValues, "id = ? ", new String[]{Integer.toString(id)});
         return true;
     }
 
     public Integer deleteMovie(Integer id) {
         SQLiteDatabase db = this.getWritableDatabase();
-        return db.delete("movies", "id = ? ", new String[] { Integer.toString(id) });
+        return db.delete("movies",
+                "id = ? ",
+                new String[]{Integer.toString(id)});
     }
 
     public ArrayList getAllMovies() {
         ArrayList array_list = new ArrayList();
-        SQLiteDatabase db = this.getWritableDatabase();
+        SQLiteDatabase db = this.getReadableDatabase();
         Cursor res = db.rawQuery("select * from movies", null);
         res.moveToFirst();
         while (res.isAfterLast() == false) {
-            array_list.
-                    add(res.getString(res.getColumnIndex(MOVIES_COLUMN_NAME)));
+            array_list.add(res.getString(res.getColumnIndex(MOVIES_COLUMN_ID))+" "+
+                    res.getString(res.getColumnIndex(MOVIES_COLUMN_NAME)));
             res.moveToNext();
         }
         return array_list;
