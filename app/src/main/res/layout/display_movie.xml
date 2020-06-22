@@ -35,52 +35,57 @@
         android:ems="10"
         android:inputType="numberDecimal" />
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editTextName"
-        android:layout_alignParentLeft="true"
-        android:text="영화이름"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/editTextName"
+            android:layout_alignParentLeft="true"
+            android:text="영화이름"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:nestedScrollingEnabled="true"
-        android:onClick="insert"
-        android:text="save" />
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:background="#FFEB3B"
+            android:nestedScrollingEnabled="true"
+            android:onClick="insert"
+            android:text="save" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editTextRating"
-        android:layout_alignLeft="@+id/textView1"
-        android:text="평점"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_alignBottom="@+id/editTextRating"
+            android:text="평점"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editTextYear"
-        android:layout_alignLeft="@+id/textView1"
-        android:text="제작연도"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_alignBottom="@+id/editTextYear"
+            android:text="제작연도"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/editTextRating"
-        android:layout_alignLeft="@+id/textView5"
-        android:text="감독"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/editTextRating"
+            android:layout_alignLeft="@+id/textView5"
+            android:text="감독"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editTextNation"
@@ -92,16 +97,17 @@
         android:ems="10"
         android:inputType="text" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editTextNation"
-        android:layout_alignBottom="@+id/editTextNation"
-        android:layout_alignParentLeft="true"
-        android:layout_toLeftOf="@+id/editTextRating"
-        android:text="국가"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/editTextNation"
+            android:layout_alignBottom="@+id/editTextNation"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/editTextRating"
+            android:text="국가"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editTextDirector"
@@ -123,26 +129,28 @@
         android:ems="10"
         android:inputType="number" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:nestedScrollingEnabled="false"
-        android:onClick="edit"
-        android:text="UPDATE" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="#FFC107"
+            android:nestedScrollingEnabled="false"
+            android:onClick="edit"
+            android:text="UPDATE" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:nestedScrollingEnabled="true"
-        android:onClick="delete"
-        android:text="DELETE" />
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="#FF9800"
+            android:nestedScrollingEnabled="true"
+            android:onClick="delete"
+            android:text="DELETE" />
 
     </RelativeLayout>
 </ScrollView>
